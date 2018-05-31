@@ -1,0 +1,223 @@
+body{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  direction: rtl;
+  display: flex;
+  flex-flow: column;
+  background: #eeeff1;
+  position: relative;
+}
+.test{
+  width: 100%;
+}
+.wrapper{
+  width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.shopping--bg{
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  margin: 0 auto 10px auto;
+  border: 1px solid #ebeced;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:20px;
+}
+ul,li,h1,h2,h3,a{
+  margin:0px;
+  padding:0px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.font--digi{
+  font-family: 'web_Yekan';
+  font-size: 13px;
+  font-weight: 100;
+}
+.w--100{
+  width: 100%;
+}
+.digi--button{
+  border: 1px solid #ebeced;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.m--right{
+  margin-right: auto;
+}
+.flex--center{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.align--center{
+  align-items: center;
+}
+.text--right{
+  text-align: right;
+}
+.table--top{
+  vertical-align: top;
+}
+.center--box{
+  text-align: center;
+}
+.t-left{
+  text-align: left !important;
+}
+.t-right{
+  text-align: right !important;
+}
+.t-center{
+  text-align: center;
+}
+.j-center{
+  justify-content: center;
+}
+.j-left{
+  justify-content: flex-end;
+}
+.j-right{
+  justify-content: flex-start;
+}
+.offer--button{
+  background: #4cb050;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+}
+.f-column{
+  flex-flow: column;
+}
+.home--baskate{
+  background: #4caf50;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: all 120ms ease-in;
+  cursor: pointer;
+  position: relative;
+}
+.home--baskate .baskate--right{
+  background: #62b965;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  transition: all 120ms ease-in;
+}
+.home--baskate .baskate--left{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 27px;
+  padding-left: 27px;
+  align-items: center;
+}
+.home--baskate .baskte--icon{
+  background: url('../icon/slices.png') no-repeat;
+  background-position: -196px -413px;
+  height: 38px;
+  line-height: 38px;
+  width: 54px;
+}
+.home--baskate .baskate--title{
+  color: #fff;
+}
+.home--baskate .baskate--circle{
+  background: #5fbf63;
+  border-radius: 100px;
+  color: #fff;
+  padding-top: 3px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.home--baskate:hover{
+  transition: all 120ms ease-in;
+  background: #46a349;
+}
+.home--baskate:hover .baskate--right{
+  background: #5cad5f;
+  transition: all 120ms ease-in;
+}
+.home--baskate .baskte--submit{
+  width: 100%;
+  z-index: 1;
+  border: none;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background: transparent;
+  height: 100%;
+  cursor: pointer;
+}
+*:focus {
+    outline: none;
+}
+.j-end{
+  justify-content: flex-end;
+}
+.bg-red{
+  background: red;
+}
+.box--shadow{
+  border: 1px solid #ebeced;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  -ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1)
+}
+.r-radius{
+  border-radius: 4px;
+}
+.d-none{
+  display: none !important;
+}
+.bg-White{
+  background: #fff;
+}
+.d-flex {
+  display: flex;
+}
+.g-red{
+  color:red;
+}
+.button--page{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.button--send{
+  background: #969ba8;
+  border:none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.scroll--none{
+  overflow: hidden;
+}

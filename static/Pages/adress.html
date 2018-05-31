@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="public/css/font.css">
+  <link rel="stylesheet" href="public/css/web.css">
+  <link rel="stylesheet" href="public/css/jquery.progresstimer.min.css">
+  <link rel="stylesheet" href="public/css/global.css">
+  <link rel="stylesheet" href="public/css/flickity.css">
+  <link rel="stylesheet" href="public/css/draggable_flickity.css">
+  <link rel="stylesheet" href="public/css/animate.css">
+  <link rel="stylesheet" href="public/css/mega_menu.css">
+
+
+  <script src="public/scripts/jquery-3.3.1.min.js"></script>
+  <script src="public/scripts/jquery.progresstimer.min.js"></script>
+  <script src="public/scripts/mega_menu.js"></script>
+  <script src="public/scripts/flickity.pkgd.min.js"></script>
+  <script src="public/scripts/Slider.js"></script>
+  <script src="public/scripts/jquery.countdown.min.js"></script>
+  <script src="public/scripts/Slider_Adress.js"></script>
+  <script src="public/scripts/app.js"></script>
+
+
+
+</head>
+<body >
+  <div id="interest--overlay" class=""></div>
+  <div class="interest--digi digi--flex adress--modal " id="interest--digi">
+    <div class="header--interest digi--flex">
+      <div class="interest--right digi--right">
+        <h3 class="title--interest font--yekan">
+          ویرایش آدرس
+        </h3>
+      </div>
+      <div class="interest--left digi--left">
+        <div class="close" id="close--interest"></div>
+      </div>
+    </div>
+    <form action="" method="" class="modal--content w--100 content--interest">
+      <div class="modal--right digi--right">
+        <div class="modal--items digi--flex w--100">
+          <div class="digi--flex w--100 modal--item f-column">
+            <h3 class="modal--title font--digi w--100">
+              نام و نام خانوادگی تحویل گیرنده
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <input type="text" class="modal--input r-radius w--100 font--digi" value="مهدی دادور">
+          </div>
+          <div class="digi--flex w--100 modal--item f-column modal--phone">
+            <h3 class="modal--title font--digi w--100">
+              شماره تماس ضروری (تلفن همراه)
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <input type="text" class="modal--input r-radius font--digi" value="09198672314">
+          </div>
+          <div class="digi--flex w--100 modal--item f-column">
+            <h3 class="modal--title font--digi w--100">
+              شماره تلفن ثابت تحویل گیرنده
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <input type="text" class="modal--input r-radius w--100 font--digi" value="مهدی دادور">
+          </div>
+          <div class="digi--flex w--100 modal--item f-column">
+            <h3 class="modal--title font--digi w--100">
+              استان/شهر تحویل گیرنده
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <div class="digi--flex w--100 adress--location" >
+              <div class="digi--flex location--item">
+                <select class="adress--select font--digi r-radius w--100" name="">
+                  <option value="1">قم</option>
+                  <option value="2">تهران</option>
+                  <option value="3">مشهد</option>
+                  <option value="4">تبریز</option>
+                  <option value="5">شیراز</option>
+                </select>
+                <img src="public/icon/arrow-point-to-right2.svg" class="location--arrow" alt="">
+              </div>
+              <div class="digi--flex location--item">
+                <select class="adress--select font--digi r-radius w--100" name="">
+                  <option value="1">قم</option>
+                  <option value="2">تهران</option>
+                  <option value="3">مشهد</option>
+                  <option value="4">تبریز</option>
+                  <option value="5">شیراز</option>
+                </select>
+                <img src="public/icon/arrow-point-to-right2.svg" class="location--arrow" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="digi--flex w--100 modal--item f-column">
+            <h3 class="modal--title font--digi w--100">
+              محله (ویژه شهر تهران)
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <div class="digi--flex w--100 adress--location adress--citys">
+              <div class="digi--flex location--item">
+                <select class="adress--select font--digi r-radius w--100" name="">
+                  <option value="1">قم</option>
+                  <option value="2">تهران</option>
+                  <option value="3">مشهد</option>
+                  <option value="4">تبریز</option>
+                  <option value="5">شیراز</option>
+                </select>
+                <img src="public/icon/arrow-point-to-right2.svg" class="location--arrow" alt="">
+              </div>
+              <div class="digi--flex w--100 city--item">
+                <h3 class="font--digi city--title">
+                  اگه محله خود را در لیست پیدا نکردین لطفا نزدیک ترین محله آدرس خود را انتخاب کنید
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="digi--flex w--100 modal--item f-column">
+            <h3 class="modal--title font--digi w--100">
+              آدرس کد پستی
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <textarea name="name" class="font--digi model--textarea w--100" rows="8" cols="80" value="آدرس"  placeholder="ادامه آدرس خود را وارد کنید..."></textarea>
+          </div>
+          <div class="digi--flex w--100 modal--item f-column code--poste">
+            <h3 class="modal--title font--digi w--100">
+              کد پستی
+              <span class="g-red modal--star">*</span>
+            </h3>
+            <input type="text" class="modal--input r-radius w--100 font--digi" value="">
+          </div>
+          <div class="button--page w--100 digi--flex">
+            <button class="font--digi button--send r-radius">
+              انصراف
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal--left digi--left"></div>
+</form>
+</div>
+<header class="shopping--header digi--flex w--100" id="shopping--header">
+  <div class="wrapper">
+    <div class="digi--flex w--100">
+      <div class="digi--flex header--right">
+        <div class="digi--flex top--header w--100">
+          <div class="digi--flex home--register">
+            <div class="digi--flex username d-none">
+              <a href="#" class="digi--flex j-right align--center ">
+                <span class="drop--down digi--flex"></span>
+                <span class="icon--username"></span>
+                <h3 class="font--digi signup--title">
+                  سلام، مهدی دادور
+                </h3>
+              </a>
+            </div>
+            <div class="digi--flex">
+              <span class="icon--locked"></span>
+              <h3 class="font--digi home--title"> فروشگاه اینترنتی ,</h3>
+              <a href="#" class="digi--flex link--login">
+                <h3 class="font--digi home--login">وارد شوید</h3>
+              </a>
+            </div>
+            <div class="digi--flex favorite--me">
+              <a href="#" class="digi--flex j-right">
+                <span class="favorite--icon"></span>
+                <h3 class="font--digi signup--title">
+                  علاقه مندی هایه من
+                </h3>
+              </a>
+            </div>
+            <div class="digi--flex follow--up">
+              <a href="#" class="digi--flex j-right">
+                <span class="follow--icon"></span>
+                <h3 class="font--digi signup--title">
+                  پیگیری سفارش
+                </h3>
+              </a>
+            </div>
+            <div class="digi--flex home--signup d-none">
+              <a href="#" class="digi--flex j-right">
+                <span class="icon--signup"></span>
+                <h3 class="font--digi signup--title">
+                  ثبت نام کنید
+                </h3>
+              </a>
+            </div>
+            <div class="digi--flex home--gift">
+              <div class="digi--flex j-right signup--parent">
+                <img src="public/img/1496226201icons8-gift-1.png" class="signup--img" alt="">
+                <h3 class="font--digi handsel--title" id="home--handsel">
+                  هدیه
+                </h3>
+                <div class="digi--flex w--100">
+                  <div class="digi--flex home--modal f-column">
+                    <div class="digi--flex parent--modal">
+                      <a href="#" class="digi--flex modal--item w--100">
+                        <h3 class="font--digi modal--title">راهنمایه خرید هدیه</h3>
+                      </a>
+                      <a href="#" class="digi--flex modal--item w--100">
+                        <h3 class="font--digi modal--title">راهنمایه خرید هدیه</h3>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="digi--flex home--search">
+          <form class="digi--flex align--center home--baskate" action="index.html" method="post">
+            <div class="baskate--right">
+              <span class="baskte--icon digi--flex"></span>
+            </div>
+            <div class="baskate--left">
+              <h3 class="font--digi baskate--title">سبد خرید</h3>
+              <div class="font--digi baskate--circle">
+                <h3 class="font--digi circle--title">
+                  0
+                </h3>
+              </div>
+            </div>
+            <button type="submit" class="baskte--submit"></button>
+          </form>
+          <form action="" class="digi--flex">
+            <div class="search--box digi--flex">
+              <div class="digi--flex search--box">
+                <input type="text" id="search--box" class="input--search font--digi text--right" placeholder="...محصول ، دسته یا برند مورد نظرتان را انتخاب کنید">
+                <button class="button--search" type="submit">
+                  <span class="digi--flex icon--search">  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="digi--flex header--left j-end">
+        <img src="public/icon/logo--web.png" class="header--logo" alt="">
+      </div>
+
+    </div>
+  </div>
+</header>
+<div class="w--100 digi--flex shopping--adress f-column " id="shopping--adress">
+  <div class="wrapper digi--flex bg-White box--shadow ">
+    <div class="digi--flex w--100 " id="info--send">
+      <div class="digi--flex info--item digi--right ">
+        <div class="digi--flex info--right digi--right">
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+        </div>
+        <div class="digi--flex parent--circle f-column">
+          <div class="info--circle digi--flex j-center circle--selected">
+            <span class="circle--icon digi--flex">
+            </span>
+            <span class="nested--bg"></span>
+          </div>
+          <h3 class="digi--flex font--digi login--title">ورود به دیجی کالا</h3>
+        </div>
+        <div class="digi--flex big--line">
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="digi--flex info--item digi--right ">
+        <div class="digi--flex parent--circle f-column">
+          <div class="info--circle digi--flex j-center">
+            <span class="nested--bg"></span>
+          </div>
+          <h3 class="digi--flex font--digi login--title">اطلاعات ارسال سفارش</h3>
+        </div>
+      </div>
+      <div class="digi--flex info--item digi--right info--payment">
+        <div class="digi--flex big--line">
+          <span class="line"></span>
+        </div>
+        <div class="digi--flex parent--circle f-column">
+          <div class="info--circle digi--flex j-center">
+            <span class="nested--bg"></span>
+          </div>
+          <h3 class="digi--flex font--digi login--title">اطلاعات پرداخت</h3>
+        </div>
+        <div class="digi--flex info--right digi--right">
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+          <span class="info--line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper digi--flex f-column" id="info--add">
+    <div action="" class="digi--flex w--100 add--address">
+      <div class="digi--flex select--address align--center">
+        <span class="select--icon d-flex"></span>
+        <h3 class="font--digi select--title">انتخاب آدرس</h3>
+      </div>
+      <div class="digi--flex add--text">
+        <button type="button" name="button" class="info--submit font--digi box--shadow">
+          افزودن آدرس جدید
+        </button>
+      </div>
+    </div>
+    <form action="" class="w--100 digi--flex boxs--address">
+      <div class="main-carousel  w--100">
+        <div class="carousel-cell  w--100">
+          <div class="digi--flex w--100 min--items">
+            <div class="digi--flex min--item bg-White w--100 f-column">
+              <div class="w--100 digi--flex box--edit ">
+                <div class="digi--flex w--100 parent--name">
+                  <div class="digi--right top--right">
+                    <h3 class="font--digi box--name">مهدی دادور</h3>
+                  </div>
+                  <div class="digi--left top--left">
+                    <div class="digi--flex modal--parent" id="interest--product">
+                      <div class="digi--flex j-center icon--parent">
+                        <span class="icon--edit" id="icon--edit"></span>
+                      </div>
+                    </div>
+                    <div class="digi--flex j-center icon--parent">
+                      <span class="icon--delete" id="icon--delete"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="digi--flex w--100 user--neighbourhood">
+                <div class="box--wrapper digi--flex">
+                  <div class="digi--flex neighbourhood--item ">
+                    <span class="font--digi neighbourhood--tilte">استان:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">تهران</span>
+                  </div>
+                  <div class="digi--flex neighbourhood--item ">
+                    <span class="font--digi neighbourhood--tilte">شهر:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">تهران</span>
+                  </div>
+                  <div class="digi--flex neighbourhood--item">
+                    <span class="font--digi neighbourhood--tilte">محله:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">جنت آباد</span>
+                  </div>
+                  <span class="d-flex box--line"></span>
+                </div>
+              </div>
+              <div class="digi--flex w--100 user--neighbourhood user--adress">
+                <div class="box--wrapper digi--flex">
+                  <div class="digi--flex neighbourhood--item ">
+                    <span class="font--digi neighbourhood--tilte">آدس:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">متن ساختگی</span>
+                  </div>
+                </div>
+              </div>
+              <div class="digi--flex box--wrapper user--map">
+                <div class="user--item digi--flex t-center user--text">
+                  <h3 class="font--digi user--title">
+                    با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+                  </h3>
+                </div>
+                <span class="d-flex box--line"></span>
+              </div>
+              <div class="digi--flex w--100 user--neighbourhood">
+                <div class="box--wrapper digi--flex">
+                  <div class="digi--flex neighbourhood--item ">
+                    <span class="font--digi neighbourhood--tilte">شماره تلفن ثابت:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">38906421</span>
+                  </div>
+                  <div class="digi--flex neighbourhood--item ">
+                    <span class="font--digi neighbourhood--tilte">شما تماس ضروری:</span>
+                    <span class="font--digi neighbourhood--tilte neighbourhood--margin">09198672314</span>
+                  </div>
+                </div>
+              </div>
+              <div class="w--100 digi--flex user--send ">
+                <div class="digi--flex send--item t-center w--100 j-center">
+                  <div class="user--circle">
+                    <span class="circle--nested"></span>
+                  </div>
+                  <h3 class="font--digi item--title ">
+                    به آدرس ارسال می شود
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+    <form action="" class="digi--flex w--100 way--adress f-column">
+        <div class="digi--flex w--100 add--address">
+            <div class="digi--flex select--address align--center">
+              <span class="select--icon d-flex"></span>
+              <h3 class="font--digi select--title">انتخاب شیوه ارسال</h3>
+            </div>
+        </div>
+        <div class="w--100 digi--flex box--shadow f-column bg-White list--product">
+          <div class="w--100 digi--flex f-column list--items">
+              <div class="digi--flex add--address list--adress">
+                <div class="digi--flex select--address align--center">
+                  <span class="select--icon d-flex"></span>
+                  <h3 class="font--digi product--title">لیست مرسوله ها</h3>
+                </div>
+              </div>
+              <div class="w--100 digi--flex list--item f-column">
+                <div class="digi--flex list--send f-column w--100">
+                    <div class="digi--flex w--100 list--slider">
+                        <div class="digi--flex list--nav">
+                          <h3 class="font--digi list--title">
+                            محصولاتی که در این مرسوله ارسال می شوند.
+                          </h3>
+                        </div>
+                        <div class="w--100 digi--flex">
+
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+          </div>
+
+        </div>
+    </form>
+  </div>
+</div>
+
+<div class="digi--flex w--100 product--parent" id="product--parent">
+
+  <div class="digi--flex product--about w--100">
+    <div class="wrapper">
+      <div class="digi--flex w--100 about--parent">
+        <div class="digi--flex about--right digi--right">
+          <h3 class="about--title font--digi">
+            7 روزه هفته 24 ساعته
+          </h3>
+        </div>
+        <div class="digi--flex about--left digi--left">
+          <ul class="about--ul digi--flex w--100">
+            <li class="digi--flex about--li align--center">
+              <a href="#" class="digi--flex align--center link--about">
+                <h3 class="font--digi about--text">
+                  021-5852
+                </h3>
+              </a>
+              <span class="about--icon"></span>
+            </li>
+            <li class="digi--flex about--li align--center">
+              <a href="#" class="digi--flex align--center link--about">
+                <h3 class="font--digi about--text">
+                  پیگیری سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex about--li align--center question--general">
+              <a href="#" class="digi--flex align--center link--about">
+                <h3 class="font--digi about--text">
+                  سوالات متداول
+                </h3>
+              </a>
+              <span class="general--icon digi--right"></span>
+            </li>
+            <li class="digi--flex about--li align--center about--email">
+              <h3 class="font--digi about--text">
+                info@digikala.com
+              </h3>
+              <span class="icon--email igi--right"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="digi--flex w--100 info--send">
+    <div class="wrapper">
+      <div class="digi--flex w--100">
+        <ul class="digi--flex w--100">
+          <li class="digi--flex align--center info--parent ">
+            <a href="#" class="digi--flex info--link  align--center w--100">
+              <img src="public/icon/1506408012shipping-express.png" class="info--icon" alt="">
+              <h3 class="font--digi info--text">تحویل اکسپرس</h3>
+            </a>
+          </li>
+          <li class="digi--flex align--center info--parent ">
+            <a href="#" class="digi--flex info--link  align--center w--100">
+              <img src="public/icon/15064021137day-guarantee.png" class="img--date" alt="">
+              <h3 class="font--digi info--text"> 7 روز ضمانت بازگشت</h3>
+            </a>
+          </li>
+          <li class="digi--flex align--center info--parent ">
+            <a href="#" class="digi--flex info--link  align--center w--100">
+              <img src="public/icon/1506407740cod.png" class="img--payment" alt="">
+              <h3 class="font--digi info--text">تحویل اکسپرس</h3>
+            </a>
+          </li>
+          <li class="digi--flex align--center info--parent ">
+            <a href="#" class="digi--flex info--link  align--center w--100">
+              <img src="public/icon/1506408084best-price.png" class="img--price" alt="">
+              <h3 class="font--digi info--text">تحویل اکسپرس</h3>
+            </a>
+          </li>
+          <li class="digi--flex align--center info--parent ">
+            <a href="#" class="digi--flex info--link  align--center w--100">
+              <img src="public/icon/1506407909certificate.png" class="img--Warranty" alt="">
+              <h3 class="font--digi info--text">تحویل اکسپرس</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="digi--flex w--100 product--socials">
+    <div class="digi--flex w--100 f-column socials">
+      <div class="wrapper">
+        <div class="digi--flex w--100 socials--min">
+          <div class="digi--right social--right">
+            <ul class="digi--flex social--ul f-column">
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    راهنمایه خرید دیجی کالا
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    ثبت سفارش
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    رویه های ارسال سفارش
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    شیوه هایه پرداخت
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    معرفی دیجی بن
+                  </h3>
+                </a>
+              </li>
+            </ul>
+            <ul class="digi--flex social--ul f-column">
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    راهنمایه خرید دیجی کالا
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    ثبت سفارش
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    رویه های ارسال سفارش
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    شیوه هایه پرداخت
+                  </h3>
+                </a>
+              </li>
+              <li class="digi--flex social--li ">
+                <a href="#" class="digi--flex w--100">
+                  <h3 class="font--digi social--title">
+                    معرفی دیجی بن
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="digi--left social--left f-column">
+            <div class="digi--flex w--100 email--text">
+              <h3 class="font--digi email--title">
+                از تخفیف ها و جدیدترین های دیجی کالا باخبر شوید!
+              </h3>
+            </div>
+            <div class="email--parent w--100">
+              <div class="digi--flex w--100 parent--submit">
+                <input type="text" class="font--digi email--input" placeholder="آدرس ایمیل خود را وارد کنید">
+                <button  type="submit" class="font--digi email--submit" >
+                  تایید ایمیل
+                </button>
+              </div>
+            </div>
+            <div class="digi--flex w--100 socials--netework align--center">
+              <div class="digi--flex socials--parent align--center digi--right">
+                <ul class="digi--flex socials--ul">
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/facebook.svg" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/twitter-logo-on-black-background.svg" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/google-plus.svg" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/instagram.svg" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/download.png" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                  <li class="digi--flex socials--li">
+                    <a href="#" class="digi--flex">
+                      <img src="public/icon/telegram.svg" class="socials--icon digi--flex" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="digi--leftd digi--flex socials--icons">
+                <div class="digi--flex parent--bazar">
+                  <a href="https://cafebazaar.ir/?l=fa" class="digi--flex link--bazar j-center">
+                    <img src="public/icon/cafebazaar-digikala.png" class="icon--bazar" alt="">
+                  </a>
+                </div>
+                <div class="digi--flex parent--bazar">
+                  <a href="https://cafebazaar.ir/?l=fa" class="digi--flex link--bazar j-center">
+                    <img src="public/icon/1514638424Sibapp-DK.png" class="icon--bazar" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="digi--flex w--100 footer-menu">
+      <div class="wrapper">
+        <div class="digi--flex w--100 menu--follow">
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  راهنمایه خرید دیجی کالا
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  کالای دیجیتال
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  راهنمایه خرید دیجی کالا
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  راهنمایه خرید دیجی کالا
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  راهنمایه خرید دیجی کالا
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+          <ul class="digi--flex social--ul f-column">
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  راهنمایه خرید دیجی کالا
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  ثبت سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  رویه های ارسال سفارش
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  شیوه هایه پرداخت
+                </h3>
+              </a>
+            </li>
+            <li class="digi--flex social--li ">
+              <a href="#" class="digi--flex w--100">
+                <h3 class="font--digi social--title">
+                  معرفی دیجی بن
+                </h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="digi--flex w--100 jobs">
+      <div class="digi--flex wrapper f-column parent--jobs">
+        <div class="digi--flex w--100">
+          <ul class="jobs--ul digi--flex w--100">
+            <li class="jobs--li">
+              <a href="#" class="font--digi jobs--title">
+                درباره دیجی کالا
+              </a>
+            </li>
+            <li class="jobs--li">
+              <a href="#" class="font--digi jobs--title">
+                درباره دیجی کالا
+              </a>
+            </li>
+            <li class="jobs--li">
+              <a href="#" class="font--digi jobs--title">
+                درباره دیجی کالا
+              </a>
+            </li>
+            <li class="jobs--li">
+              <a href="#" class="font--digi jobs--title">
+                درباره دیجی کالا
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="digi--flex w--100 jobs--about align--center">
+          <div class="digi--right jobs--right">
+            <h3 class="font--digi jobs--text">
+              استفاده از مطالب فروشگاه اینترنتی دیجی کالا فقط برای مقاصد غیر تجاری و با ذکر منبع بلامانع است. کليه حقوق اين سايت متعلق به شرکت نوآوران فن آوازه (فروشگاه آنلاین دیجی‌کالا) می‌باشد.
+            </h3>
+          </div>
+          <div class="digi--left jobs--left">
+            <h3 class="copy--right font--digi">
+              Copyright © 2006 - 2018 Digikala.com
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="digi--flex w--100 footer" id="footer">
+  <div class="wrapper">
+    <div class="digi--flex w--100">
+      <div class="digi--flex footer--right digi--right j-center">
+        <a href="#" class="brand--footer">
+          <img src="public/icon/logo.png" class="footer--img" alt="">
+        </a>
+        <a href="#" class="brand--footer">
+          <img src="public/icon/dsadsa.png" class="footer--img" alt="">
+        </a>
+        <a href="#" class="brand--footer">
+          <img src="public/icon/logo-ecunion.png" class="footer--img" alt="">
+        </a>
+      </div>
+      <div class="digi--flex footer--left digi--right f-column">
+        <div class="digi--flex footer--top w--100">
+          <div class="digi--flex brand--parent">
+            <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+          </div>
+          <div class="digi--flex brand--parent">
+            <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+          </div>
+          <div class="digi--flex brand--parent">
+            <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+          </div>
+          <div class="digi--flex brand--parent">
+            <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+          </div>
+        </div>
+        <div class="digi--flex w--100 footer--text">
+          <h3 class="font--digi footer--title">
+            فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین
+          </h3>
+        </div>
+        <div class="digi--flex w--100 footer--descrption">
+          <p class="font--digi footer--desc">
+            کشور، اینک در آستانه‌ی دهمین سال فعالیت، با گستره‌ای از کالاهای متنوع برای تمام اقشار جامعه و هر رده‌ی سنی، برای کاربران خود «تجربه‌ی لذت‌بخش یک خرید اینترنتی» را تداعی می‌کند.
+            <a href="#" class="font--digi footer--special">فروشگاه اینترنتی</a>
+            «ارسال سریع»، «ضمانت بهترین قیمت» و «تضمین اصل بودن کالا» سه اصل اولیه است که دیجی‌کالا از نخستین روز تاسیس سعی کرده به آن پایبند باشد و با رعایت این سه اصل، هرسال، حوزه‌های تازه‌ای را در فروش کالا و خدمات، به دایره‌ی فعالیت خود افزوده است. گستره‌ای به وسعت
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

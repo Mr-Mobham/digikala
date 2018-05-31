@@ -1,0 +1,10 @@
+ #shopping--home #offer--slider .main-carousel .carousel-cell {
+  right: 0px !important;
+  left : 0px !important;
+}
+#shopping--home #offer--slider .flickity-enabled.is-draggable .flickity-viewport{
+  overflow: inherit;
+}
+#shopping--home #offer--slider .flickity-slider{
+  transform : translateX(-0%) !important;
+}

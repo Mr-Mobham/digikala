@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="public/css/font.css">
+  <link rel="stylesheet" href="public/css/web.css">
+  <link rel="stylesheet" href="public/css/jquery.progresstimer.min.css">
+  <link rel="stylesheet" href="public/css/global.css">
+  <link rel="stylesheet" href="public/css/flickity.css">
+  <link rel="stylesheet" href="public/css/draggable_flickity.css">
+  <link rel="stylesheet" href="public/css/animate.css">
+  <link rel="stylesheet" href="public/css/mega_menu.css">
+
+
+  <script src="public/scripts/jquery-3.3.1.min.js"></script>
+  <script src="public/scripts/jquery.progresstimer.min.js"></script>
+  <script src="public/scripts/mega_menu.js"></script>
+  <script src="public/scripts/flickity.pkgd.min.js"></script>
+  <script src="public/scripts/Slider.js"></script>
+  <script src="public/scripts/jquery.countdown.min.js"></script>
+  <script src="public/scripts/app.js"></script>
+
+
+
+</head>
+<body id="shopping--home">
+  <header class="shopping--header digi--flex w--100" id="shopping--header">
+    <div class="wrapper">
+      <div class="digi--flex w--100">
+        <div class="digi--flex header--right">
+          <div class="digi--flex top--header w--100">
+            <div class="digi--flex home--register">
+              <div class="digi--flex username d-none">
+                <a href="#" class="digi--flex j-right align--center ">
+                  <span class="drop--down digi--flex"></span>
+                  <span class="icon--username"></span>
+                  <h3 class="font--digi signup--title">
+                  سلام، مهدی دادور
+                  </h3>
+                </a>
+              </div>
+              <div class="digi--flex">
+                <span class="icon--locked"></span>
+                <h3 class="font--digi home--title"> فروشگاه اینترنتی ,</h3>
+                <a href="#" class="digi--flex link--login">
+                  <h3 class="font--digi home--login">وارد شوید</h3>
+                </a>
+              </div>
+              <div class="digi--flex favorite--me">
+                <a href="#" class="digi--flex j-right">
+                  <span class="favorite--icon"></span>
+                  <h3 class="font--digi signup--title">
+                    علاقه مندی هایه من
+                  </h3>
+                </a>
+              </div>
+              <div class="digi--flex follow--up">
+                <a href="#" class="digi--flex j-right">
+                  <span class="follow--icon"></span>
+                  <h3 class="font--digi signup--title">
+                    پیگیری سفارش
+                  </h3>
+                </a>
+              </div>
+              <div class="digi--flex home--signup d-none">
+                <a href="#" class="digi--flex j-right">
+                  <span class="icon--signup"></span>
+                  <h3 class="font--digi signup--title">
+                    ثبت نام کنید
+                  </h3>
+                </a>
+              </div>
+              <div class="digi--flex home--gift">
+                <div class="digi--flex j-right signup--parent">
+                  <img src="public/img/1496226201icons8-gift-1.png" class="signup--img" alt="">
+                  <h3 class="font--digi handsel--title" id="home--handsel">
+                    هدیه
+                  </h3>
+                  <div class="digi--flex w--100">
+                    <div class="digi--flex home--modal f-column">
+                      <div class="digi--flex parent--modal">
+                        <a href="#" class="digi--flex modal--item w--100">
+                          <h3 class="font--digi modal--title">راهنمایه خرید هدیه</h3>
+                        </a>
+                        <a href="#" class="digi--flex modal--item w--100">
+                          <h3 class="font--digi modal--title">راهنمایه خرید هدیه</h3>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="digi--flex home--search">
+            <form class="digi--flex align--center home--baskate" action="index.html" method="post">
+              <div class="baskate--right">
+                <span class="baskte--icon digi--flex"></span>
+              </div>
+              <div class="baskate--left">
+                <h3 class="font--digi baskate--title">سبد خرید</h3>
+                <div class="font--digi baskate--circle">
+                  <h3 class="font--digi circle--title">
+                    0
+                  </h3>
+                </div>
+              </div>
+              <button type="submit" class="baskte--submit"></button>
+            </form>
+            <form action="" class="digi--flex">
+              <div class="search--box digi--flex">
+                <div class="digi--flex search--box">
+                  <input type="text" id="search--box" class="input--search font--digi text--right" placeholder="...محصول ، دسته یا برند مورد نظرتان را انتخاب کنید">
+                  <button class="button--search" type="submit">
+                    <span class="digi--flex icon--search">  </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="digi--flex header--left j-end">
+          <img src="public/icon/logo--web.png" class="header--logo" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="mega--menu">
+      <div class="wrapper">
+        <div class="digi--flex w--100">
+          <ul class="mega--ul">
+            <li class="mega--li">
+              <span class="title--mega">
+                کالایه دیجیتال
+                <span class="icon--arrow"></span>
+              </span>
+              <ul class="menu--level1">
+                <li class="level1--li">
+                  <a href="#" class="level1--a link--title ">کالایه دیجی تال</a>
+                  <ul class="table--info">
+                    <li class="info--li ">
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                    </li>
+                    <li class="info--li ">
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                      <img src="public/img/download.jfif" class="img--table" alt="">
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="level1--li">
+                  <a href="#" class="level1--a link--title">کالایه دیجی تال</a>
+                  <ul class="table--info">
+                    <li class="info--li first--info">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="mega--li Clothing">
+              <span class="title--mega">
+                پوشاک
+                <img src="public/icon/down-arrow.svg" class="icon--arrow" alt="">
+              </span>
+              <ul class="menu--level1">
+                <li class="level1--li">
+                  <a href="#" class="level1--a link--title ">کالایه دیجی تال</a>
+                  <ul class="table--info">
+                    <li class="info--li ">
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                    </li>
+                    <li class="info--li ">
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                      <div class="parent--info">
+                        <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                        <a href="#" class="info--a">گوشیه موبایل</a>
+                      </div>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a first--info">گوشیه موبایل</a>
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <div class="parent--info">
+                        <div class="parent--brand">
+                          <img src="public/img/15189526781a-14.png" class="img--brand" alt="">
+                        </div>
+                        <div class="min--logs">
+                          <div class="logo--right">
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                            <a href="#" class="link--logo">
+                              <img src="public/img/NIKE-71DA01.png" class="img--brand" alt="">
+                            </a>
+                          </div>
+                          <div class="logo--left">
+                            <div class="show--brand">
+                              <a href="#" class="min--img">
+                                <div>
+                                  <img src="public/img/1518952050men.png" class="img--brand2" alt="">
+                                </div>
+                                <div class="min--title">
+                                  <h3 class="title--brand">انواع لباس مردانه </h3>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="level1--li">
+                  <a href="#" class="level1--a link--title">کالایه دیجی تال</a>
+                  <ul class="table--info">
+                    <li class="info--li first--info">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+                    <li class="info--li">
+                      <a href="#" class="info--a">گوشیه موبایل</a>
+                    </li>
+
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="digi--flex">
+            <div class="offer--amazing digi--flex align--center">
+              <span class="icon--amazing"></span>
+              <h3 class="font--digi amazing--title">
+                پیشنهاد شگفت انگیز
+              </h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="store--product" >
+      <div class="min--cart w--100 digi--flex">
+        <div class="home--right digi--right">
+          <div class="offer--moment digi--flex w--100">
+            <div class="digi--flex w--100 offer--header j-center">
+              <h3 class="offer--title font--digi">
+                پیشنهاد لحظه ای
+              </h3>
+            </div>
+            <div class="offer--content">
+              <div class="offer--pic digi--flex j-center">
+                <img src="public/img/Samsung-Galaxy-A8-Plus-2018-Dual-SIM-Mobile-Phone-5e4824.jpg" class="offer--img" alt="">
+              </div>
+              <div class="digi--flex offer-data w--100">
+                <div class="digi--flex w--100 offer--top">
+                  <h3 class="offer--text font--digi ">
+                    تبلت ايسوس مدل ZenPad 8.0 Z380KNL 4G ظرفيت 16 گيگابايت
+                  </h3>
+                </div>
+                <div class="progress--timer w--100">
+                  <div class="loading-progress"></div>
+                </div>
+                <div class="digi--flex parent--price w--100">
+                  <div class="digi--flex offer--price">
+                    <h3 class="font--digi title--price">
+                      930,000
+                      <span class="offer--plank">تومان</span>
+                    </h3>
+                  </div>
+                  <div class="offer--button j-center digi--flex">
+                    <a href="#" class="digi--flex">
+                      <h3 class="font--digi button--title">
+                        مشاهده
+                      </h3>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w--100 digi--flex offer--brans">
+            <a href="#" class="digi--flex brans--link box--shadow">
+              <img src="public/img/DigikalaTelegram-290x52-fixed.jpg" class="brands--img" alt="">
+            </a>
+            <a href="#" class="digi--flex brans--link box--shadow">
+              <img src="public/img/327404e0-4612-dsa1x1.jpeg" class="brands--img" alt="">
+            </a>
+            <a href="#" class="digi--flex brans--link box--shadow">
+              <img src="public/img/327404e0-4612-dsa1x1.jpeg" class="brands--img" alt="">
+            </a>
+          </div>
+          <div class="w--100 digi--flex brands--company">
+            <div class="digi--flex company--parent box--shadow align--center">
+              <a href="#" class="digi--flex company--link ">
+                <img src="public/img/samsung-brand.jpg" class="company--img" alt="">
+              </a>
+            </div>
+            <div class="digi--flex company--parent box--shadow align--center">
+              <a href="#" class="digi--flex company--link ">
+                <img src="public/img/samsung-brand.jpg" class="company--img" alt="">
+              </a>
+            </div>
+            <div class="digi--flex company--parent box--shadow align--center">
+              <a href="#" class="digi--flex company--link ">
+                <img src="public/img/samsung-brand.jpg" class="company--img" alt="">
+              </a>
+            </div>
+            <div class="digi--flex company--parent box--shadow align--center">
+              <a href="#" class="digi--flex company--link ">
+                <img src="public/img/samsung-brand.jpg" class="company--img" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="w--100 digi--flex news--new">
+            <div class="w--100 news--header">
+              <h3 class="font--digi news--title">
+                تازه ترین خبر ها
+              </h3>
+            </div>
+            <div class="w--100 news--items digi--flex box--shadow">
+              <ul class="digi--flex w--100 news--ul">
+                  <li class="digi--flex news--item w--100 ">
+                  <div class="digi--flex news--right">
+                    <div class="digi--flex news--link w--100 j-center">
+                      <a href="#" class="digi--flex w--100 news--link">
+                        <img src="public/img/samsung-brand.jpg" class="news--img w--100" alt="">
+                      </a>
+                    </div>
+                  </div>
+                  <div class="digi--flex news--left">
+                    <a href="#" class="digi--flex news--min">
+                        <div class="digi--flex w--100 parent--news">
+                          <h3 class="font--digi w--100 news--text">
+                            صعود قیمت کیا اسپورتیج
+                          </h3>
+                        </div>
+                        <div class="digi--flex w--100 parent--time">
+                          <h3 class="font--digi w--100 news--time">
+                            يکشنبه 2 ارديبهشت 1397
+                          </h3>
+                        </div>
+                    </a>
+                  </div>
+                </li>
+                <li class="digi--flex news--item w--100 ">
+                <div class="digi--flex news--right">
+                  <div class="digi--flex news--link w--100 j-center">
+                    <a href="#" class="digi--flex w--100 news--link">
+                      <img src="public/img/samsung-brand.jpg" class="news--img w--100" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="digi--flex news--left">
+                  <a href="#" class="digi--flex news--min">
+                      <div class="digi--flex w--100 parent--news">
+                        <h3 class="font--digi w--100 news--text">
+                          صعود قیمت کیا اسپورتیج
+                        </h3>
+                      </div>
+                      <div class="digi--flex w--100 parent--time">
+                        <h3 class="font--digi w--100 news--time">
+                          يکشنبه 2 ارديبهشت 1397
+                        </h3>
+                      </div>
+                  </a>
+                </div>
+              </li>
+              <li class="digi--flex news--item w--100 ">
+              <div class="digi--flex news--right">
+                <div class="digi--flex news--link w--100 j-center">
+                  <a href="#" class="digi--flex w--100 news--link">
+                    <img src="public/img/samsung-brand.jpg" class="news--img w--100" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="digi--flex news--left">
+                <a href="#" class="digi--flex news--min">
+                    <div class="digi--flex w--100 parent--news">
+                      <h3 class="font--digi w--100 news--text">
+                        صعود قیمت کیا اسپورتیج
+                      </h3>
+                    </div>
+                    <div class="digi--flex w--100 parent--time">
+                      <h3 class="font--digi w--100 news--time">
+                        يکشنبه 2 ارديبهشت 1397
+                      </h3>
+                    </div>
+                </a>
+              </div>
+            </li>
+              </ul>
+              <div class="digi--flex w--100 more--parent">
+                  <a href="#" class="news--more font--digi digi--left">
+                    مشاهده خبر هایه بیشتر
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home--left digi--left">
+          <div class="home--content w--100 digi--flex">
+            <div class="digi--flex w--100" id="offer--slider">
+              <div class="main-carousel w--100">
+                <div class="carousel-cell w--100">
+                  <a href="#" class="digi--flex w--100">
+                    <img src="public/img/f390853c.jpg" class="slider--img" alt="">
+                  </a>
+                </div>
+                <div class="carousel-cell w--100">
+                  <a href="#" class="digi--flex w--100">
+                    <img src="public/img/15189526781a-14.png" class="slider--img" alt="">
+                  </a>
+                </div>
+                <div class="carousel-cell w--100">
+                  <a href="#" class="digi--flex w--100">
+                    <img src="public/img/f390853c.jpg" class="slider--img" alt="">
+                  </a>
+                </div>
+                <div class="carousel-cell w--100">
+                  <a href="#" class="digi--flex w--100">
+                    <img src="public/img/f390853c.jpg" class="slider--img" alt="">
+                  </a>
+                </div>
+                <div class="carousel-cell w--100">
+                  <a href="#" class="digi--flex w--100">
+                    <img src="public/img/f390853c.jpg" class="slider--img" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="carousel carousel-nav w--100">
+                <div class="carousel-cell">
+                  <span class="nav--tinger"></span>
+                  <div class="digi--flex w--100 j-center nav--content">
+                    <h3 class="nav--title font--digi">
+                      عطر زنانه
+                    </h3>
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <span class="nav--tinger"></span>
+                  <div class="digi--flex w--100 j-center nav--content">
+                    <h3 class="nav--title font--digi">
+                      هوآوی
+                    </h3>
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <span class="nav--tinger"></span>
+                  <div class="digi--flex w--100 j-center nav--content">
+                    <h3 class="nav--title font--digi">
+                      هوآوی
+                    </h3>
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <span class="nav--tinger"></span>
+                  <div class="digi--flex w--100 j-center nav--content">
+                    <h3 class="nav--title font--digi">
+                      هوآوی
+                    </h3>
+                  </div>
+                </div>
+                <div class="carousel-cell">
+                  <span class="nav--tinger"></span>
+                  <div class="digi--flex w--100 j-center nav--content">
+                    <h3 class="nav--title font--digi">
+                      هوآوی
+                    </h3>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="digi--flex w--100 offer--today">
+              <div class="offer--right digi--flex w--100">
+                <div class="offer--strong digi--flex show--offer finish--offer">
+                  <div class="digi--flex item--right">
+                    <div class="digi--flex offer--value w--100">
+                      <div class="digi--flex parent--item w--100">
+                        <h3 class="font--digi item--title">پیشنهاد شگفت انگیز امروز</h3>
+                      </div>
+                      <div class="digi--flex w--100 align--center">
+                        <div class="digi--flex w--100 parent--data">
+                          <div class="digi--flex value--right align--center">
+                            <span class="item--tinger"></span>
+                            <h3 class="font--digi discount--title">
+                              150
+                            </h3>
+                          </div>
+                          <div class="digi--flex value--left  align--center">
+                            <span class="font--digi product--price digi--flex ">
+                              <h3 class="price--title ">
+                                79
+                              </h3>
+                            </span>
+                            <span class="offer--unit digi--flex thousand--price">
+                              <h3 class="font--digi unit--title">
+                                هزار تومان
+                              </h3>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w--100 digi--flex offer--info">
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">اندازه صفحه نمایش: 15.6 اینچ</span>
+                    </div>
+                    <div class="digi--flex offer--timer w--100 f-column">
+                      <div class="digi--flex timer--label">
+                        <h3 class="timer--title font--digi">
+                          فرصت باقی مانده تا این پیشنهاد
+                        </h3>
+                      </div>
+                      <div class="digi--flex counter--timer">
+                        <input type="hidden" class="data--counter" data--counter="4:35 AM 4/20/2018">
+                        <ul class="w--100 digi--flex" id="offer--counter0">
+                          <li class="digi--flex ">
+                            <span class="days font--digi">00</span>
+                          </li>
+                          <li class="seperator">:</li>
+                          <li class="digi--flex ">
+                            <span class="hours font--digi">00</span>
+                          </li>
+                          <li class="seperator">:</li>
+                          <li class="digi--flex">
+                            <span class="minutes font--digi">00</span>
+                          </li>
+                          <li class="seperator digi--flex">:</li>
+                          <li class="digi--flex">
+                            <span class="seconds font--digi">00</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="digi--flex item--left w--100">
+                    <div class="digi--flex w--100 item--content j-center">
+                      <h3 class="digi--flex font--digi pic--title">
+                        هارد اکسترنال وسترن دیجیتال مدل Elements ظرفیت 1 ترابایت
+                      </h3>
+                    </div>
+                    <div class="digi--flex w--100 item--pic j-center">
+                      <img src="public/img/asus-vivobook-x510uq-f-15-inch-laptop-290b10.jpg" class="item--img" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="offer--strong  digi--flex">
+                  <div class="digi--flex item--right">
+                    <div class="digi--flex offer--value w--100">
+                      <div class="digi--flex parent--item w--100">
+                        <h3 class="font--digi item--title">پیشنهاد شگفت انگیز امروز</h3>
+                      </div>
+                      <div class="digi--flex w--100 align--center">
+                        <div class="digi--flex w--100 parent--data">
+                          <div class="digi--flex value--right align--center">
+                            <span class="item--tinger"></span>
+                            <h3 class="font--digi discount--title">
+                              150
+                            </h3>
+                          </div>
+                          <div class="digi--flex value--left  align--center">
+                            <span class="font--digi product--price digi--flex ">
+                              <h3 class="price--title ">
+                                79
+                              </h3>
+                            </span>
+                            <span class="offer--unit digi--flex thousand--price">
+                              <h3 class="font--digi unit--title">
+                                هزار تومان
+                              </h3>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w--100 digi--flex offer--info">
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">تعداد:3 پارچه</span>
+                      <span class="digi--flex font--digi w--100 info--title">اندازه صفحه نمایش: 15.6 اینچ</span>
+                    </div>
+                    <div class="digi--flex offer--timer w--100 f-column">
+                      <div class="digi--flex timer--label">
+                        <h3 class="timer--title font--digi">
+                          فرصت باقی مانده تا این پیشنهاد
+                        </h3>
+                      </div>
+                      <div class="digi--flex counter--timer">
+                        <input type="hidden" class="data--counter" data--counter="4:35 PM 4/19/2018">
+                        <ul class="w--100 digi--flex" id="offer--counter">
+                          <li class="digi--flex ">
+                            <span class="days font--digi">00</span>
+                          </li>
+                          <li class="seperator">:</li>
+                          <li class="digi--flex ">
+                            <span class="hours font--digi">04</span>
+                          </li>
+                          <li class="seperator">:</li>
+                          <li class="digi--flex">
+                            <span class="minutes font--digi">15</span>
+                          </li>
+                          <li class="seperator digi--flex">:</li>
+                          <li class="digi--flex">
+                            <span class="seconds font--digi">07</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="digi--flex item--left w--100">
+                    <div class="digi--flex w--100 item--content j-center">
+                      <h3 class="digi--flex font--digi pic--title">
+                        هارد اکسترنال وسترن دیجیتال مدل Elements ظرفیت 1 ترابایت
+                      </h3>
+                    </div>
+                    <div class="digi--flex w--100 item--pic j-center">
+                      <img src="public/img/tecno-zarf-black-01-pan-3-pcs-66a1be.jpg" class="item--img" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="offer--left digi--flex">
+                <input type="hidden" id="time--setinterval" data-setinterval="2000">
+                <ul class="digi--flex offer--nav w--100">
+                  <li class="offer--li w--100 selected--amazing">
+                    <h3 class="font--digi soft--title">
+                      اسپیکر بلوتوثی
+                    </h3>
+                    <span class="selected--tinger"></span>
+                  </li>
+                  <li class="offer--li w--100">
+                    <h3 class="font--digi soft--title">
+                      اسپیکر بلوتوثی
+                    </h3>
+                    <span class="selected--tinger"></span>
+                  </li>
+                  <li class="offer--li w--100">
+                    <h3 class="font--digi soft--title">
+                      اسپیکر بلوتوثی
+                    </h3>
+                    <span class="selected--tinger"></span>
+                  </li>
+                  <li class="offer--li w--100">
+                    <h3 class="font--digi soft--title">
+                      اسپیکر بلوتوثی
+                    </h3>
+                    <span class="selected--tinger"></span>
+                  </li>
+                  <li class="offer--li w--100">
+                    <h3 class="font--digi soft--title">
+                      اسپیکر بلوتوثی
+                    </h3>
+                    <span class="selected--tinger"></span>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="digi--flex w--100 brand--random align--center">
+              <div class="digi--flex brands--right ">
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+              </div>
+              <div class="digi--flex brand--center">
+                <a href="#" class="digi--flex brand--button ">
+                  <h3 class="font--digi brands--title">مشاهده همه پیشنهاد های شگفت انگیز</h3>
+                </a>
+              </div>
+              <div class="digi--flex brands--left ">
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+                <div class="digi--flex item--brand j-center">
+                  <img src="public/img/Hooshmand-Classic-Plus-Medical-Pillow-7e4e6e.jpg" class="brand--img" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="digi--flex category--pic w--100">
+              <div class="digi--flex brand--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/02e78d88.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item big--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/1162107a.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/02e78d88.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/02e78d88.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item remove_margin">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/02e78d88.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/02e78d88.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+              <div class="digi--flex brand--item big--item">
+                <a href="#" class="digi--flex w--100">
+                  <img src="public/img/1162107a.jpg" class="brand--pic" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="digi--flex w--100 syntax--send">
+              <ul class="digi--flex w--100 syntax--ul">
+                <li class="digi--flex syntax--li">
+                  <a href="#" class="digi--flex syntax--link">
+                    <span class="syntax--icons digi--flex"></span>
+                    <h3 class="syntax--title font--digi">تحویل اکسپرس</h3>
+                  </a>
+                </li>
+                <li class="digi--flex syntax--li">
+                  <a href="#" class="digi--flex syntax--link">
+                    <span class="syntax--icons digi--flex icon--date"></span>
+                    <h3 class="syntax--title font--digi">٧ روز ضمانت بازگشت</h3>
+                  </a>
+                </li>
+                <li class="digi--flex syntax--li">
+                  <a href="#" class="digi--flex syntax--link">
+                    <span class="syntax--icons digi--flex icon--paypal"></span>
+                    <h3 class="syntax--title font--digi">پرداخت در محل</h3>
+                  </a>
+                </li>
+                <li class="digi--flex syntax--li">
+                  <a href="#" class="digi--flex syntax--link ">
+                    <span class="syntax--icons digi--flex icon--magnifier"></span>
+                    <h3 class="syntax--title font--digi">تضمین بهترین قیمت</h3>
+                  </a>
+                </li>
+                <li class="digi--flex syntax--li">
+                  <a href="#" class="digi--flex syntax--link ">
+                    <span class="syntax--icons digi--flex icon--warranty2"></span>
+                    <h3 class="syntax--title font--digi">ضمانت اصل بودن کالا</h3>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="offer--you w--100">
+              <div class="digi--flex w--100 title--you">
+                <h3 class="font--digi "> پیشنهاد هایه دیجی کالا برای شما</h3>
+              </div>
+              <div class="digi--flex offer--products w--100 box--shadow" >
+                <div class="digi--flex w--100" >
+                  <div class="w--100 digi--flex slider--header align--center">
+                    <h3 class="font--digi digital--title">کالای دیجیتال</h3>
+                  </div>
+                  <div class="w--100 slider--digital digi--flex" >
+                    <div class="w--100 main-carousel">
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"  class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <span class="digital--shadow" ></span>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <div class="digi--flex offer--products w--100 box--shadow">
+                <div class="digi--flex w--100" >
+                  <div class="w--100 digi--flex slider--header align--center">
+                    <h3 class="font--digi digital--title">کالای دیجیتال</h3>
+                  </div>
+                  <div class="w--100 slider--digital digi--flex" >
+                    <div class="w--100 main-carousel">
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"  class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <span class="digital--shadow" id=""></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="digi--flex offer--products w--100 box--shadow">
+                <div class="digi--flex w--100" >
+                  <div class="w--100 digi--flex slider--header align--center">
+                    <h3 class="font--digi digital--title">کالای دیجیتال</h3>
+                  </div>
+                  <div class="w--100 slider--digital digi--flex" >
+                    <div class="w--100 main-carousel">
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"  class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <span class="digital--shadow" id=""></span>
+                  </div>
+                </div>
+              </div>
+              <div class="digi--flex offer--products w--100 box--shadow">
+                <div class="digi--flex w--100" >
+                  <div class="w--100 digi--flex slider--header align--center">
+                    <div class="digi--flex new--title">
+                      <h3 class="font--digi digital--title black--color">کالای دیجیتال</h3>
+                    </div>
+                    <div class="digi--flex complate--list align--center">
+                      <span class="list--icon"></span>
+                      <a href="#" class="font--digi list--link">
+                        لیست کامل
+                      </a>
+                    </div>
+                  </div>
+                  <div class="w--100 slider--digital digi--flex" >
+                    <div class="w--100 main-carousel">
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="true">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#" class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-cell">
+                        <a href="#"  class="digi--flex w--100">
+                          <div class="digi--flex w--100 j-center">
+                            <img src="public/img/Samsung-Galaxy-Note-8-SM-N950FD-64GB-Dual-SIM-Mobile-Phone-c163ef.jpg" class="img--digital " alt="">
+                            <h3 class="font--digi digital--text w--100">
+                              گوشي موبايل سامسونگ مدل Galaxy Note 8  SM-N950FD دو سيم‌کارت ظرفيت 64 گيگابايت
+                            </h3>
+                            <div class="digi--flex w--100 align--center digital--info j-center">
+                              <h3 class="font--digi digital--price">
+                                4,000,4
+                              </h3>
+                              <h3 class="font--digi digital--uniti">
+                                تومان
+                              </h3>
+                            </div>
+                            <div class="digital--discount j-center digi--flex w--100" data--show="false">
+                              <h3 class="font--digi price--discount">3,44548</h3>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <span class="digital--shadow" id=""></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+    <footer class="digi--flex w--100 footer" id="footer">
+      <div class="wrapper">
+        <div class="digi--flex w--100">
+          <div class="digi--flex footer--right digi--right j-center">
+            <a href="#" class="brand--footer">
+              <img src="public/icon/logo.png" class="footer--img" alt="">
+            </a>
+            <a href="#" class="brand--footer">
+              <img src="public/icon/dsadsa.png" class="footer--img" alt="">
+            </a>
+            <a href="#" class="brand--footer">
+              <img src="public/icon/logo-ecunion.png" class="footer--img" alt="">
+            </a>
+          </div>
+          <div class="digi--flex footer--left digi--right f-column">
+            <div class="digi--flex footer--top w--100">
+              <div class="digi--flex brand--parent">
+                <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+              </div>
+              <div class="digi--flex brand--parent">
+                <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+              </div>
+              <div class="digi--flex brand--parent">
+                <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+              </div>
+              <div class="digi--flex brand--parent">
+                <img src="public/img/digistyle-online-clothes-shopping.png" class="footer--logo" alt="">
+              </div>
+            </div>
+            <div class="digi--flex w--100 footer--text">
+              <h3 class="font--digi footer--title">
+                فروشگاه اینترنتی دیجی کالا، بررسی، انتخاب و خرید آنلاین
+              </h3>
+            </div>
+            <div class="digi--flex w--100 footer--descrption">
+              <p class="font--digi footer--desc">
+                کشور، اینک در آستانه‌ی دهمین سال فعالیت، با گستره‌ای از کالاهای متنوع برای تمام اقشار جامعه و هر رده‌ی سنی، برای کاربران خود «تجربه‌ی لذت‌بخش یک خرید اینترنتی» را تداعی می‌کند.
+                <a href="#" class="font--digi footer--special">فروشگاه اینترنتی</a>
+                   «ارسال سریع»، «ضمانت بهترین قیمت» و «تضمین اصل بودن کالا» سه اصل اولیه است که دیجی‌کالا از نخستین روز تاسیس سعی کرده به آن پایبند باشد و با رعایت این سه اصل، هرسال، حوزه‌های تازه‌ای را در فروش کالا و خدمات، به دایره‌ی فعالیت خود افزوده است. گستره‌ای به وسعت
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+</body>
+</html>
