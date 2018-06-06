@@ -19,7 +19,7 @@ import Head from 'next/head'
           <link rel="stylesheet" href="static/styles/css/animate.css"/>
           <link rel="stylesheet" href="static/styles/css/mega_menu.css"/>
           <link rel="stylesheet" href="static/styles/css/edited.css"/>
-
+          <link rel="stylesheet" href="static/styles/css/filter.css"/>
 
           </Head>
         );

@@ -8,9 +8,6 @@ body{
   background: #eeeff1;
   position: relative;
 }
-.test{
-  width: 100%;
-}
 .wrapper{
   width: 1190px;
   margin-right: auto;
@@ -66,9 +63,7 @@ ul,li,h1,h2,h3,a{
   align-items: center;
   justify-content: center;
 }
-.align--center{
-  align-items: center;
-}
+
 .text--right{
   text-align: right;
 }
@@ -197,7 +192,7 @@ ul,li,h1,h2,h3,a{
   background: #fff;
 }
 .d-flex {
-  display: flex;
+  display: flex !important;
 }
 .g-red{
   color:red;
@@ -212,12 +207,102 @@ ul,li,h1,h2,h3,a{
   border:none;
   padding-top: 6px;
   padding-bottom: 6px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
   text-align: center;
   color: #fff;
   cursor: pointer;
+  transition: all 120ms ease-in;
+}
+.button--send:hover{
+  background: #8a8f9c;
+  transition: all 120ms ease-in;
 }
 .scroll--none{
   overflow: hidden;
+}
+.location_denied{
+  display: flex !important;
+}
+.change--pointer{
+  cursor: default !important;
+}
+.vald--item{
+  border-color: red !important;
+}
+.disabled--item{
+  background: #f8f8f8;
+}
+.warring{
+  border-color: red !important;
+}
+.m-auto{
+  margin-right: auto;
+  margin-left: auto;
+}
+.a-center{
+  align-items: center;
+}
+.bg-white{
+  background: white;
+}
+.gray{
+  background: #808080;
+}
+.silver{
+  background: #c0c0c0;
+}
+.v-flow{
+  overflow: hidden;
+}
+.c-black{
+  color: #4d4d4d !important;
+}
+.golden{
+  background: #ffd700;
+}
+.red{
+  background: #ff0000;
+}
+.rose-color{
+  background: #f08080;
+}
+.black{
+  background: #000;
+}
+.c-pointer{
+  cursor: pointer !important;
+}
+.g-row{
+  flex-grow: 1;
+}
+.p-relative{
+  position: relative;
+}
+.c-blue{
+  color: #2196f3 !important;
+}
+.digi--flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.digi--right{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.digi--left{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.align--center{
+  align-items: center;
+}
+.b-black{
+  background: #000;
+}
+.bg-white{
+  background: #fff;
 }
