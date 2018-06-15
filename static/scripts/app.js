@@ -19,9 +19,11 @@ class Events {
     this.Cart_Select_Box();
     this.Focus();
     this.News_Hover();
-    this.Selected_Adress();
     this.SelectBox_Adress();
-    this.Hide_Scroll();
+    this.Add_Adress();
+    this.Spical_City();
+    this.Citys_Html();
+    this.Zoom();
   }
   Check_Model(){
     const elem = $("html");
@@ -135,7 +137,7 @@ class Events {
     });
   }
   Close_Interest(){
-    const elem = $("#close--interest");
+    const elem         = $("#close--interest");
 
     elem.on("click",()=>{
       const modal        = $("#interest--digi.interest--digi");
@@ -143,13 +145,16 @@ class Events {
 
       modal.removeClass('show--modal');
       overlay_body.removeClass("show--overlay");
+      $('html').removeClass("scroll--none");
     });
-    $("html").on("click",(event)=>{
-      const target   = $(event.target);
-      const elem     = $("#interest--digi");
-      const parent   = target.parents("#interest--digi");
-      const overlay  = $("#interest--overlay");
-      const close    = target.parents(".header--interest").prevObject.is('#close--interest');
+    $(document).on("click", 'html',(event)=>{
+      const target           = $(event.target);
+      const elem             = $("#interest--digi");
+      const parent           = target.parents("#interest--digi");
+      const overlay          = $("#interest--overlay");
+      const close            = target.parents(".header--interest").prevObject.is('#close--interest');
+      const cancell_submit   = target.is('#adress--cancell');
+
 
       if (parent.is('#interest--digi')) {
         elem.addClass('show--modal');
@@ -157,16 +162,26 @@ class Events {
         if (close) {
           elem.removeClass('show--modal');
           overlay.removeClass("show--overlay");
+          $('html').removeClass("scroll--none");
+        }
+        if (cancell_submit) {
+          const overlay = $("#interest--overlay");
+          const modal   = $("#interest--digi");
+          overlay.removeClass("show--overlay");
+          modal.removeClass("show--modal");
         }
       }
       else {
         elem.removeClass("show--modal");
         overlay.removeClass("show--overlay");
+        $('html').removeClass("scroll--none");
         if (target.parents("#interest--product").is('#interest--product')) {
           elem.addClass('show--modal');
+          $('html').addClass("scroll--none");
         }
         if (target.parents("#interest--product").is('#interest--product')) {
           overlay.addClass("show--overlay");
+          $('html').addClass("scroll--none");
         }
 
       }
@@ -332,19 +347,9 @@ class Events {
       $Text.eq(index).removeClass('news--hover');
     });
   }
-  Selected_Adress (){
-    const elem = $("#info--add .send--item");
 
-    elem.on('click',(event)=>{
-      const target = $(event.target);
-      const parent = target.parents(".min--item");
-      const index  = parent.index();
-
-      $("#info--add .min--item").eq(0).addClass("selected--adress");
-    });
-  }
   SelectBox_Adress(){
-    const Select_Box     = $(".adress--modal .adress--select");
+    const Select_Box     = $(".adress--modal .valid--selected");
 
     for (let i = 0; i < Select_Box.length; i++) {
       $(Select_Box[i]).attr('data-i',i);
@@ -373,11 +378,48 @@ class Events {
       }
     });
   }
-  Hide_Scroll(){
-    const Edit_Adress = $("#interest--product")
-    Edit_Adress.on('click',()=>{
-      $("html").addClass("scroll--none");
+  Add_Adress(){
+    const  carousel_cell  = $('#info--add .boxs--address .carousel-cell');
+    const  height         = carousel_cell.height();
+    const add             = $("#info--add .adress--add");
+    add.css({
+      'height' : height - 10 + 'px',
     });
+
+
+  }
+  Spical_City(){
+    const elem            = $("#info--add .special--table .special--td");
+    const selected_circle = $("#info--add .special--selected");
+    elem.on('click',(event)=>{
+      const target = $(event.target);
+      const attr   = target.attr('data-id');
+
+      elem.removeClass("td--bg");
+      if (target.is('.special--td')) {
+        target.addClass("td--bg");
+        selected_circle.attr('data-selected',attr);
+
+        $('html, body').animate({
+        scrollTop: $('.submit--delivery').offset().top - 16
+        }, 'slow');
+      }
+
+    });
+
+  }
+  Citys_Html(){
+    $('html').on('click',(event)=>{
+      const target = $(event.target);
+      const elem   = $("#info--add .special--table .special--td");
+
+      if (!target.is('.special--td')) {
+        elem.removeClass("td--bg");
+      }
+    });
+  }
+  Zoom(){
+    var $easyzoom = $('.easyzoom').easyZoom();
   }
 
 
