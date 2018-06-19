@@ -47,11 +47,10 @@ class Attr_Item extends Component {
     render() {
       const props   = this.props;
       const content = props.content;
-      // <div  className= { this.state.condition ? "digi--flex w--100 filter--min filter--brand select--dropdown" : "digi--flex w--100 filter--min filter--brand" }>
 
         return (
             <div className="digi--flex w--100 p-relative" >
-                <div  className='digi--flex w--100 filter--min filter--brand select--dropdown'>
+                <div className= { this.state.condition ? "digi--flex w--100 filter--min filter--brand select--dropdown" : "digi--flex w--100 filter--min filter--brand" }>
                     <div className="digi--flex w--100 filter--category c-pointer" onClick={this.Toggle.bind(this)}>
                       <h3 className=" font--digi dropdown--text">{content.name}</h3>
                       <img src="http://127.0.0.1:8000/icon/arrow-point-to-right3.svg" className="d-flex icon--dropdown"  />

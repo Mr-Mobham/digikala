@@ -35,8 +35,19 @@ class Home extends React.Component {
       url_Filter = localStorage.getItem("Url");
     }
     else {
-      url_Filter = 'http://127.0.0.1:8000/api/products' + req.url;
+      if (req.originalUrl) {
+        if (Object.keys(req.query).length != 0) {
+          url_Filter = 'http://127.0.0.1:8000/api/products' + req.originalUrl;
+        }
+        else {
+          url_Filter = 'http://127.0.0.1:8000/api/products';
+        }
+      }
+      else {
+        url_Filter = 'http://127.0.0.1:8000/api/products';
+      }
     }
+
     const Filter_res = await axios({
       method : 'get',
       url    : url_Filter,
@@ -67,7 +78,6 @@ class Home extends React.Component {
       query       : query
     };
   }
-
   componentWillMount() {
     console.log(this.props);
   }

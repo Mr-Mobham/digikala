@@ -20,9 +20,20 @@ import Products_Item from './Products_Item';
           </Products_Item>
        );
      });
+   }
+   componentWillUpdate(nextProps, nextState) {
+     const Products  = nextProps.Products;
 
-
-
+     // this.Products   = Products.map((text,index)=>{
+     //   return(
+     //     <Products_Item
+     //      key={text.id}
+     //      content={text}
+     //      colors  = {Products.Colors[index]}
+     //      >
+     //      </Products_Item>
+     //   );
+     // });
    }
     render() {
       const props = this.props;

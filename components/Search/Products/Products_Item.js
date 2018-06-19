@@ -11,13 +11,11 @@ import React,{Component} from 'react';
        this.setState({colors:colors})
      }
 
-
    }
    componentDidMount() {
      if (typeof(this.state.colors.CodeColor) != 'undefined') {
        this.setState({colors_code:this.state.colors.CodeColor})
      }
-
    }
 
     render() {

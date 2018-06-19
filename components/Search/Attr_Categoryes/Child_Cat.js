@@ -22,34 +22,35 @@ import axios from 'axios';
      this.setState({
        Checked: !this.state.Checked
      });
+     const url = `http://127.0.0.1:8000/api/products/search`;
 
 
      if (this.state.Checked) {
+
+       function removeParam(key) {
+         var url = document.location.href;
+         var params = url.split('?');
+         if (params.length == 1) return;
+
+         url = params[0] + '?';
+         params = params[1];
+         params = params.split('&');
+
+         params.forEach(function(value, index){
+           var v = value.split('=');
+           if (v[0] != key) url += value + '&';
+         });
+
+         url = url.replace(/&$/, '');
+         return url = url.replace(/\?$/, '');
+     }
+
+       Router.push(`/search`, removeParam(`${props.type}[${content.id}]`));
+       localStorage.setItem("Url", removeParam(`${props.type}[${content.id}]`));
        this.Remove(content);
 
-       function removeURLParameter(url, parameter) {
-         var urlparts= url.split('?');
-         if (urlparts.length>=2) {
-
-           var prefix= encodeURIComponent(parameter)+'=';
-           var pars= urlparts[1].split(/[&;]/g);
-
-           for (var i= pars.length; i-- > 0;) {
-             if (pars[i].lastIndexOf(prefix, 0) !== -1) {
-               pars.splice(i, 1);
-             }
-           }
-           url= urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
-           return url;
-         } else {
-           return url;
-         }
-       }
-
-       history.pushState({},null,removeURLParameter(window.location.href , `status${content.id}`));
      }
      else {
-       this.props.Compony_Name(content);
        function updateURLParameter(url, param, paramVal)
        {
          var TheAnchor = null;
@@ -94,8 +95,9 @@ import axios from 'axios';
          var rows_txt = temp + "" + param + "=" + paramVal;
          return baseURL + "?" + newAdditionalURL + rows_txt;
        }
-        Router.push(`/search`, updateURLParameter(window.location.href, `${props.type}`, `${content.value}`))
-        localStorage.setItem("Url", updateURLParameter(window.location.href, `${props.type}`, `${content.value}`));
+        Router.push(`/search`, updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`))
+        localStorage.setItem("Url", updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`));
+        this.props.Compony_Name(content);
 
      }
    }
