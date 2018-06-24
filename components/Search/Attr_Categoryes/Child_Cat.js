@@ -95,6 +95,7 @@ import axios from 'axios';
          var rows_txt = temp + "" + param + "=" + paramVal;
          return baseURL + "?" + newAdditionalURL + rows_txt;
        }
+
         Router.push(`/search`, updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`))
         localStorage.setItem("Url", updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`));
         this.props.Compony_Name(content);
