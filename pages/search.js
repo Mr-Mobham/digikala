@@ -78,11 +78,23 @@ class Home extends React.Component {
       });
 
 
+      let url_company_name = 'http://127.0.0.1:8000/api/companys';
+      const company_res = await axios({
+        method : 'get',
+        url    : url_company_name,
+        headers: {
+          'Content-Type'  : 'application/json',
+          'Authorization' : token
+        }
+      });
+
+
       return{isServer,
-        Mega_Menu   : table_res.data,
-        Filters     : Filter_res.data,
-        Products    : products_res.data,
-        query       : query
+        Mega_Menu    : table_res.data,
+        Filters      : Filter_res.data,
+        Products     : products_res.data,
+        Compony_Name : company_res.data,
+        query        : query
       };
     }
     else {
@@ -93,21 +105,13 @@ class Home extends React.Component {
   }
   componentWillMount() {
     const props = this.props;
-    this.setState({Run:''});
-    this.run =     <Container
-          Products={props.Products}
-          Filters = {props.Filters}
+    this.run    =  <Container
+          Products     = {props.Products}
+          Filters      = {props.Filters}
+          Query        = {props.query}
+          Compony_Name = {props.Compony_Name}
         >
         </Container>
-  }
-  componentDidMount() {
-    const props = this.props;
-    this.run =     <Container
-          Products={props.Products}
-          Filters = {props.Filters}
-        >
-        </Container>
-        this.setState({delegate:true});
   }
 
     render() {
@@ -120,7 +124,6 @@ class Home extends React.Component {
               Mega_Menu={props.Mega_Menu}
               >
               </Header>
-
             {this.run}
             <About></About>
             <Footer></Footer>

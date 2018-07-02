@@ -4,7 +4,18 @@ import Names_Compony from './Names_Compony';
 
 
  class Search_Compony_Name extends Component {
+   componentWillMount() {
+     this.Compony_Name();
+   }
+   Compony_Name(){
+     const props = this.props;
 
+     this.name = props.Compony_Name.map((text,index)=>{
+       return(
+         <Names_Compony key={text.id} content={text}></Names_Compony>
+       )
+     });
+   }
     render() {
       const props = this.props;
 
@@ -34,8 +45,7 @@ import Names_Compony from './Names_Compony';
                 <div className="digi--flex w--100 category--search">
                   <input type="text" placeholder="جستجو کنید" id="myInput" className="font--digi w--100 category--input r-radius f--input f-focus" />
                 </div>
-                <Names_Compony Products={props.Products}></Names_Compony>
-
+                {this.name}
                 <div className="digi--flex more--item ">
                   <div className="digi--flex min--more c-pointer">
                     <span className="font--digi more--title more--icon">+</span>

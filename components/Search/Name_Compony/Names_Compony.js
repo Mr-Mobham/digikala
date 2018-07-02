@@ -12,11 +12,14 @@ import React,{Component} from 'react';
 
    }
     render() {
+      const props   = this.props;
+      const content = props.content;
+
         return (
-          <div className="digi--flex w--100 category--checkbox" id="category--checkbox" data-show={4}>
+          <div className="digi--flex w--100 category--checkbox" id="category--checkbox" >
             <label className="digi--flex  available--item w--100 available--checked category--available d-flex">
                 <div className="digi--flex w--flex">
-                  <input type="checkbox" className="d-none product--checkbox" data-type="status" defaultValue="on" />
+                  <input type="checkbox" className="d-none product--checkbox"  defaultValue="on" />
                     <div className="digi--right available--status c-pointer">
                       <span className="available--checkmark checkmark r-radius" />
                         <svg version="1.1" className="icon--checked" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" xmlnsXlink="http://www.w3.org/1999/xlink" enableBackground="new 0 0 26 26">
@@ -26,10 +29,14 @@ import React,{Component} from 'react';
                 </div>
                 <div className="digi--flex g-row ">
                   <div className="digi--right available--status g-row c-pointer">
-                  <h3 className="font--digi available--title c-pointer ">سونی</h3>
+                  <h3 className="font--digi available--title c-pointer ">
+                    {content.fa_name}
+                  </h3>
                   </div>
                   <div className="digi--left available--status g-row c-pointer">
-                  <h3 className="font--digi available--title c-pointer ">Sony</h3>
+                    <h3 className="font--digi available--title c-pointer ">
+                      {content.en_name}
+                    </h3>
                   </div>
                 </div>
             </label>

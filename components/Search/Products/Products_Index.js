@@ -10,22 +10,24 @@ import Router from 'next/router';
    Run(){
      const props    = this.props;
 
-     if (Router.router != null) {
-       const matches = Router.router.asPath.match(/\[(.*?)\]/);
-        if (matches) {
-          const Products = props.Products;
-          const Colors   = props.Colors.Products.Colors;
+     const Products = props.Products;
+     const Colors   = props.Colors.Products.Colors;
+       this.Products = Products.map((text,index)=>{
+         return(
+           <Products_Item
+           key={text.id}
+           content={text}
+           colors  = {Colors[index]}
+           >
+           </Products_Item>
+         );
+       });
 
-          this.Products = Products.map((text,index)=>{
-            return(
-              <Products_Item
-               key={text.id}
-               content={text}
-               colors  = {Colors[index]}
-               >
-               </Products_Item>
-            );
-          });
+
+
+     if (Router.router != null) {
+       const matches  = Router.router.asPath.match(/\[(.*?)\]/);
+        if (matches) {
         }
         else {
           const Products = props.Products.Products.Brands;
@@ -50,7 +52,7 @@ import Router from 'next/router';
 
    }
    Update(prevProps,prevState){
-     const props = prevProps;
+     const props   = prevProps;
     const Products = props.Filters;
         if (typeof(Products) != 'undefined') {
           const Colors   = props.Colors.Products.Colors;
@@ -65,7 +67,6 @@ import Router from 'next/router';
             );
           });
         }
-        
    }
 
     render() {
