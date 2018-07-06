@@ -16,7 +16,6 @@ import React,{Component} from 'react';
       const content = props.content;
 
         return (
-          <div className="digi--flex w--100 category--checkbox" id="category--checkbox" >
             <label className="digi--flex  available--item w--100 available--checked category--available d-flex">
                 <div className="digi--flex w--flex">
                   <input type="checkbox" className="d-none product--checkbox"  defaultValue="on" />
@@ -40,7 +39,6 @@ import React,{Component} from 'react';
                   </div>
                 </div>
             </label>
-          </div>
         );
     }
 }
