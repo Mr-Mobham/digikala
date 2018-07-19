@@ -5,8 +5,8 @@ import Attr_Category from '../Attr_Categoryes/Index';
 import Selected_Name from '../Selected_Name/Index';
 import axios from 'axios';
 import Router from 'next/router';
-
-
+import Ajax from '../../Dependency/Ajax/Index';
+const $new = new Ajax();
 
 
  class Index extends Component {
@@ -14,11 +14,17 @@ import Router from 'next/router';
      this.setState({
        Arry : []
      });
-     this.Global();
+
+     this.Search_Compony_Name();
+     this.Products();
    }
-   Global(){
-      this.Products();
-      this.Search_Compony_Name();
+   Search_Compony_Name(){
+     const props = this.props;
+     this.Search_Compony_Name = <Search_Compony_Name
+        Compony_Name={props.Compony_Name}
+        Selected={this.Checked_Company_Name.bind(this)}
+      >
+     </Search_Compony_Name>;
 
    }
    Products(){
@@ -31,22 +37,28 @@ import Router from 'next/router';
       >
       </Products_Index>
    }
-   Search_Compony_Name(){
-     const props   = this.props;
+   Checked_Company_Name(content,checked){
+     if (checked) {
+       this.setState({
+         Arry : [...this.state.Arry,content]
+       });
 
-     this.Search_Compony_Name = <Search_Compony_Name
-        Compony_Name={props.Compony_Name}
-      >
-     </Search_Compony_Name>
+     }
+     else {
+       this.Attr_Name_Remove(content);
+     }
+
+     this.Update_Company_Name();
    }
-   Compony_Name(data){
+   Attr_Name(data){
      this.setState({
-       Arry : data
+       Arry : [...this.state.Arry,data]
      });
 
-     this.Res_Filter_Products();
+     this.Update_Company_Name();
+
    }
-   Remove_Compony_Name(content){
+   Attr_Name_Remove(content){
      let Index = '';
      this.state.Arry.map((text,index)=>{
        if (text.id == content.id) {
@@ -58,8 +70,8 @@ import Router from 'next/router';
        Arry: this.state.Arry
      });
 
-     this.Update_Compoy_Name();
-   }
+     
+    }
    componentWillUpdate(nextProps, nextState) {
      this.Update(nextProps,nextState);
    }
@@ -68,7 +80,9 @@ import Router from 'next/router';
      this.Update_Filters(nextProps,nextState);
    }
    Update_Selected_Name(nextProps,nextState){
-     this.Selected_Name = <Selected_Name Compony_Name={nextState.Arry}></Selected_Name>;
+     this.Selected_Name = <Selected_Name Compony_Name={nextState.Arry}
+      >
+      </Selected_Name>;
    }
    Update_Filters(nextProps,nextState){
      if (typeof(nextState.Filters) != 'undefined') {
@@ -79,60 +93,26 @@ import Router from 'next/router';
        >
        </Products_Index>
      }
-
    }
-   Res_Filter_Products(){
-     const token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijc4ZDc0OTUyYTg1OTM0NmE2ZWYyZGViN2ViZmQwZGQ4MDdiY2NjYjM0OGU1ZTYyYjk1OTk1MGExYjliZjZiYzEyODgzMDRhYjIxZjA2ZDkzIn0.eyJhdWQiOiIxIiwianRpIjoiNzhkNzQ5NTJhODU5MzQ2YTZlZjJkZWI3ZWJmZDBkZDgwN2JjY2NiMzQ4ZTVlNjJiOTU5OTUwYTFiOWJmNmJjMTI4ODMwNGFiMjFmMDZkOTMiLCJpYXQiOjE1MjUyNDE5MzQsIm5iZiI6MTUyNTI0MTkzNCwiZXhwIjoxNTU2Nzc3OTM0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u8VWhj9xCVe8Hymm8IAeqxSWfutfjhILONSssVKt-wbjv2zr2-2j4yNEMymCE0dqNpxGzygnuM3bhMj828OEWL2nKrMwigEaMSdhLzXAA34xVjAJkQrTv9MreItZHMOHYMq97-Y6yuaq7sZcpvq0y3_iPmS676f68-ej97ceRB0KNneEn7b_r7LvfOSeBeqb_H04VWD3u4-3aIcK9PUpH-QiEP7SIpyae_qqfVNcxHsSOT0rba0JtYDWb9IEgtJa8-_v2FGSwCvGYCFVD4og5_SlLRHtTGI2bK1GpOSNo5TB98wBzLLNlUidshCWg8PTQ-w2Xlt-OLUPCJJMCPjzUCCPHcbINp10x3I5i31g35R6yEhrQ_5_ZA60cV_Wg_b8SqBbTd5bOmX4_1PcxZ68fsOkzMUm8TCAfLcI0jL4iE8f49c5r_2I6_pI5wTRsqhdkSx34BY8T1gN5U9NcdU27f79yOSLtlpfN15ODLmikGc8_VzF2XApoeMY8ZvpSFx24o5gczbClJAd5bdkucWctyscVLTKEgVWJb_6VegY3zsZ6Q6lc7iptiWn-EKuY7oatbVRcHJSH62ON4XfY8BOHz_uzZoIBo3GuF3AFxhlLtAmJUxuMTCBtUHiVyCbWszDLTp3UiGfcrNFzShiThw1qoDhXx2u7HN2tVvY5npZbo4";
-
-     const url_storage  = localStorage.getItem("Url");
-     const url_split    = url_storage.split('?')[1];
-     const url          = `http://127.0.0.1:8000/api/products/search?${url_split}`;
-
-     const table_res = axios({
-       method : 'get',
-       url    : url,
-       headers: {
-         'Content-Type'  : 'application/json',
-         'Authorization' : token
-       }
-     }).then((res)=>{
-        this.setState({
-          Filters:res.data
-        });
-     })
-
-   }
-   Update_Compoy_Name(){
-     const token = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijc4ZDc0OTUyYTg1OTM0NmE2ZWYyZGViN2ViZmQwZGQ4MDdiY2NjYjM0OGU1ZTYyYjk1OTk1MGExYjliZjZiYzEyODgzMDRhYjIxZjA2ZDkzIn0.eyJhdWQiOiIxIiwianRpIjoiNzhkNzQ5NTJhODU5MzQ2YTZlZjJkZWI3ZWJmZDBkZDgwN2JjY2NiMzQ4ZTVlNjJiOTU5OTUwYTFiOWJmNmJjMTI4ODMwNGFiMjFmMDZkOTMiLCJpYXQiOjE1MjUyNDE5MzQsIm5iZiI6MTUyNTI0MTkzNCwiZXhwIjoxNTU2Nzc3OTM0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.u8VWhj9xCVe8Hymm8IAeqxSWfutfjhILONSssVKt-wbjv2zr2-2j4yNEMymCE0dqNpxGzygnuM3bhMj828OEWL2nKrMwigEaMSdhLzXAA34xVjAJkQrTv9MreItZHMOHYMq97-Y6yuaq7sZcpvq0y3_iPmS676f68-ej97ceRB0KNneEn7b_r7LvfOSeBeqb_H04VWD3u4-3aIcK9PUpH-QiEP7SIpyae_qqfVNcxHsSOT0rba0JtYDWb9IEgtJa8-_v2FGSwCvGYCFVD4og5_SlLRHtTGI2bK1GpOSNo5TB98wBzLLNlUidshCWg8PTQ-w2Xlt-OLUPCJJMCPjzUCCPHcbINp10x3I5i31g35R6yEhrQ_5_ZA60cV_Wg_b8SqBbTd5bOmX4_1PcxZ68fsOkzMUm8TCAfLcI0jL4iE8f49c5r_2I6_pI5wTRsqhdkSx34BY8T1gN5U9NcdU27f79yOSLtlpfN15ODLmikGc8_VzF2XApoeMY8ZvpSFx24o5gczbClJAd5bdkucWctyscVLTKEgVWJb_6VegY3zsZ6Q6lc7iptiWn-EKuY7oatbVRcHJSH62ON4XfY8BOHz_uzZoIBo3GuF3AFxhlLtAmJUxuMTCBtUHiVyCbWszDLTp3UiGfcrNFzShiThw1qoDhXx2u7HN2tVvY5npZbo4";
-
+   Update_Company_Name(){
      const url_storage  = localStorage.getItem("Url");
      let url_split      = url_storage.split('?')[1];
-     let url            = `http://127.0.0.1:8000/api/products/search?${url_split}`;
-     //
-     if (typeof(url_split) == 'undefined') {
-       url = `http://127.0.0.1:8000/api/products`;
-     }
-     const table_res = axios({
-       method : 'get',
-       url    : url,
-       headers: {
-         'Content-Type'  : 'application/json',
-         'Authorization' : token
-       }
-     }).then((res)=>{
-       if (typeof(url_split) == 'undefined') {
-         this.setState({
-           Filters :res.data.Products.Brands
-         });
-       }
-       else {
-         this.setState({
-           Filters:res.data
-         });
-       }
+     const res_req      = $new.GET();
 
-
+     res_req.then((res)=>{
+         if (typeof(url_split) == 'undefined') {
+           this.setState({
+             Filters :res.data.Products.Brands
+           });
+         }
+         else {
+           this.setState({
+             Filters:res.data
+           });
+           console.log(res);
+         }
      });
+
    }
     render() {
       const props = this.props;
@@ -208,6 +188,7 @@ import Router from 'next/router';
                         <span className="d-fle item--line" />
                       </div>
                       {this.Search_Compony_Name}
+
                       <div className="digi--flex w--100 p-relative select--dropdown">
                         <div className="digi--flex w--100 filter--min ">
                           <div className="digi--flex w--100 filter--category c-pointer">
@@ -237,8 +218,8 @@ import Router from 'next/router';
                       </div>
                       <Attr_Category
                         Cat={props.Products}
-                        Compony_Name={this.Compony_Name.bind(this)}
-                        Remove_Compony_Name={this.Remove_Compony_Name.bind(this)}
+                        Compony_Name={this.Attr_Name.bind(this)}
+                        Remove_Compony_Name={this.Attr_Name_Remove.bind(this)}
                        >
                        </Attr_Category>
 

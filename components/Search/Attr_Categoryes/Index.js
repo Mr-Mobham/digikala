@@ -26,9 +26,8 @@ import Attr_Item from './Attr_Item';
    }
    Compony_Name(content){
      const props   = this.props;
-     this.Arry = [...this.Arry,{id : content.id , name: content.name}];
 
-     props.Compony_Name(this.Arry);
+     props.Compony_Name(content);
    }
    Remove_Compony_Name(content){
      const props = this.props;

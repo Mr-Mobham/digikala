@@ -113,7 +113,6 @@ class Home extends React.Component {
         >
         </Container>
   }
-
     render() {
       const props = this.props;
 

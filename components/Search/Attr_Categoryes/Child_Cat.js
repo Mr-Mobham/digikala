@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
 import axios from 'axios';
+import updateURLParameter from '../../Dependency/Params/Update';
+import removeParam from '../../Dependency/Params/Remove';
 
 
  class Child_Cat extends Component {
@@ -24,89 +26,16 @@ import axios from 'axios';
      });
      const url = `http://127.0.0.1:8000/api/products/search`;
 
-
      if (this.state.Checked) {
-
-       function removeParam(key) {
-         var url = document.location.href;
-         var params = url.split('?');
-         if (params.length == 1) return;
-
-         url = params[0] + '?';
-         params = params[1];
-         params = params.split('&');
-
-         params.forEach(function(value, index){
-           var v = value.split('=');
-           if (v[0] != key) url += value + '&';
-         });
-
-         url = url.replace(/&$/, '');
-         return url = url.replace(/\?$/, '');
-     }
-
        Router.push(`/search`, removeParam(`${props.type}[${content.id}]`));
        localStorage.setItem("Url", removeParam(`${props.type}[${content.id}]`));
-       this.Remove(content);
-
+       props.Remove_Compony_Name(content);
      }
      else {
-       function updateURLParameter(url, param, paramVal)
-       {
-         var TheAnchor = null;
-         var newAdditionalURL = "";
-         var tempArray = url.split("?");
-         var baseURL = tempArray[0];
-         var additionalURL = tempArray[1];
-         var temp = "";
-
-         if (additionalURL)
-         {
-           var tmpAnchor = additionalURL.split("#");
-           var TheParams = tmpAnchor[0];
-           TheAnchor = tmpAnchor[1];
-           if(TheAnchor)
-           additionalURL = TheParams;
-
-           tempArray = additionalURL.split("&");
-
-           for (var i=0; i<tempArray.length; i++)
-           {
-             if(tempArray[i].split('=')[0] != param)
-             {
-               newAdditionalURL += temp + tempArray[i];
-               temp = "&";
-             }
-           }
-         }
-         else
-         {
-           var tmpAnchor = baseURL.split("#");
-           var TheParams = tmpAnchor[0];
-           TheAnchor  = tmpAnchor[1];
-
-           if(TheParams)
-           baseURL = TheParams;
-         }
-
-         if(TheAnchor)
-         paramVal += "#" + TheAnchor;
-
-         var rows_txt = temp + "" + param + "=" + paramVal;
-         return baseURL + "?" + newAdditionalURL + rows_txt;
-       }
-
         Router.push(`/search`, updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`))
         localStorage.setItem("Url", updateURLParameter(window.location.href, `${props.type}[${content.id}]`, `${content.ram}`));
         this.props.Compony_Name(content);
-
      }
-   }
-
-   Remove(content){
-     const props   = this.props;
-
-     props.Remove_Compony_Name(content);
    }
 
     render() {

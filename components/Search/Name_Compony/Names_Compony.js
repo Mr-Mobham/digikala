@@ -1,22 +1,47 @@
 import React,{Component} from 'react';
-
-
+import updateURLParameter from '../../Dependency/Params/Update';
+import removeParam from '../../Dependency/Params/Remove';
+import Router from 'next/router';
 
  class Names_Compony extends Component {
    componentWillMount() {
-    this.Run();
+     this.condition = false;
+     this.setState({
+       Toggle    : false,
+       condition : false,
+     });
    }
-   Run(){
+   Change(){
      const props    = this.props;
-     // const Products =
+     const content  = props.content;
+     this.condition = !this.condition;
+     const url      = 'http://127.0.0.1:8000/api/search';
 
+     this.setState({
+       condition : !this.state.condition,
+     });
+
+
+     if (this.condition) {
+       Router.push(`/search`, updateURLParameter(window.location.href, `${'company'}[${content.id}]`, `${content.id}`))
+       localStorage.setItem("Url", updateURLParameter(window.location.href, `${'company'}[${content.id}]`, `${content.id}`));
+     }
+     else {
+       Router.push(`/search`, removeParam(`${'company'}[${content.id}]`));
+       localStorage.setItem("Url", removeParam(`${'company'}[${content.id}]`));
+     }
+     
+     props.Toggle(props.content,this.condition);
    }
     render() {
       const props   = this.props;
       const content = props.content;
 
+
         return (
-            <label className="digi--flex  available--item w--100 available--checked category--available d-flex">
+            <label className={this.state.condition ? "digi--flex available--item w--100 available--checked category--available d-flex check--item" :  "digi--flex available--item w--100 available--checked category--available d-flex "}
+             onChange={this.Change.bind(this)}
+            >
                 <div className="digi--flex w--flex">
                   <input type="checkbox" className="d-none product--checkbox"  defaultValue="on" />
                     <div className="digi--right available--status c-pointer">
